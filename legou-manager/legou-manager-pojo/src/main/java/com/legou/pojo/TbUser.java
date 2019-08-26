@@ -73,4 +73,14 @@ public class TbUser implements Serializable{
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
+
+	public TbUser(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
+
+	public TbUser() {
+		super();
+	}   	
 }

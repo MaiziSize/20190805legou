@@ -31,10 +31,10 @@
 			<artifactId>mybatis-spring</artifactId>
 		</dependency>
 		<!--分页助手插件-->
-		<!-- <dependency>
-			<groupId>com.github.miemiedev</groupId>
-			<artifactId>mybatis-paginator</artifactId>
-		</dependency> -->
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+			</dependency>
 		<!-- MySql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -48,6 +48,7 @@
 		
 	</dependencies>
 	
+	
 	<!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
 	<build>
 		<resources>
@@ -60,5 +61,8 @@
                 <filtering>false</filtering>
             </resource>
         </resources>
-	</build>					
+	</build>
+		
+		
+	
 </project>

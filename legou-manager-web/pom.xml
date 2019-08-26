@@ -2,47 +2,68 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>com.legou</groupId>
 		<artifactId>legou-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
+	
 	<artifactId>legou-manager-web</artifactId>
 	<packaging>war</packaging>
 
 	<dependencies>
 
 		<dependency>
+			<groupId>fastdfs_client</groupId>
+			<artifactId>fastdfs_client</artifactId>
+			<version>1.25</version>
+		</dependency>
+	
+		<dependency>
+			<artifactId>legou-content-interface</artifactId>
 			<groupId>com.legou</groupId>
-		    <artifactId>legou-manager-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-	</dependency>
+		</dependency>
+		
+		<dependency>
+			<artifactId>legou-search-interface</artifactId>
+			<groupId>com.legou</groupId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<artifactId>legou-manager-interface</artifactId>
+			<groupId>com.legou</groupId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
-		
+
 		<!-- servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		<!--jsp-api  -->
+		<!--jsp-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jsp-api</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- Jackson Json处理工具包 -->
-			<dependency>
-				<groupId>com.fasterxml.jackson.core</groupId>
-				<artifactId>jackson-databind</artifactId>
-			</dependency>
-			
-			 <!-- Spring -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+
+
+		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -76,7 +97,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
-			<!-- exclusions排除dubbo中依赖的springjar-->
+			<!-- exclusions排除dubbo中依赖的springjar -->
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
@@ -96,10 +117,18 @@
 			<groupId>com.github.sgroschupf</groupId>
 			<artifactId>zkclient</artifactId>
 		</dependency>
+		<!-- dubbo -->
+		
+		
+		<!-- 文件上传组件 -->
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+			</dependency>
 
 	</dependencies>
-	
-	
+
+
 	<!-- 配置tomcat插件 -->
 	<build>
 		<plugins>
@@ -113,11 +142,11 @@
 			</plugin>
 		</plugins>
 	</build>
-	
 
-	
-	
-	
+
+
+
+
 
 
 </project>

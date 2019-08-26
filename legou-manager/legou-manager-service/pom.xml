@@ -13,13 +13,15 @@
 	<!-- service模块的依赖 -->
 
 	<dependencies>
+		
 		<!-- interface -->
+		
 		<dependency>
 			<groupId>com.legou</groupId>
 			<artifactId>legou-manager-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
+		
      <!-- dao -->
 		<dependency>
 			<groupId>com.legou</groupId>
@@ -104,9 +106,9 @@
 			<artifactId>spring-context-support</artifactId>
 		</dependency>
 
-
-
 	</dependencies>
+	
+	
 	<!-- 配置tomcat插件 -->
 	<build>
 		<plugins>
